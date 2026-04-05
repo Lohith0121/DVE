@@ -5,7 +5,7 @@ dest_dir="/d/New folder"
 mkdir -p "$dest_dir"
 backup_date=$(date +%b-%d-%y)
 echo "Start of backup: ${backup_dirs[@]}"
-for i in "${backup_dirs[@]}"; do
+for i in "${backup_dirs[@]}";do
   name=$(basename "$i")
   tar -czf "/tmp/${name}-${backup_date}.tar.gz" "$i"
   if [ $? -eq 0 ]; then
