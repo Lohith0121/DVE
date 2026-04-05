@@ -1,4 +1,4 @@
-#!/bin/bash
+##!/bin/bash
 
 #backup_dirs=("/c/Users/rajas/Documents" "/c/Users/rajas/Favorites")
 #dest_dir="/d/New folder"
@@ -24,6 +24,10 @@
 #rm /tmp/*.gz
 
 #echo "Backup is done"
+
+
+
+
 #!/bin/bash
 
 backup_dirs=("/home/lohith/kalyan" "/home/lohith/ambaldage")
