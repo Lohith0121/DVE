@@ -33,20 +33,22 @@
 #include <pthread.h>
 
 /* ── CONFIG — edit these before compiling ─────────────────────────────── */
-#define SERVER_HOST   "YOUR_SERVER_IP"
+#define SERVER_HOST   "192.168.100.3"  /* Server laptop IP */
 #define SERVER_PORT   5050
-#define API_KEY       "changeme123"
-#define DEVICE_ID     "my_linux_client"
+#define API_KEY       "changeme123"    /* Must match key passed to server */
+#define DEVICE_ID     "client_laptop"  /* Label for this machine */
 
 /* Folders to watch — add/remove as needed */
 static const char *WATCH_PATHS[] = {
-    /* Android shared via MTP/ADB */
+    /* Android shared via MTP/ADB — update USERNAME if needed */
     "/sdcard/WhatsApp/Media/WhatsApp Images",
     "/sdcard/WhatsApp/Media/WhatsApp Video",
     "/sdcard/WhatsApp/Media/WhatsApp Audio",
     "/sdcard/WhatsApp/Media/WhatsApp Documents",
-    /* Linux desktop (WhatsApp Web downloads) */
-    /* "/home/user/Downloads", */
+    /* WhatsApp Desktop / WhatsApp Web downloads on Linux */
+    /* Change 'user' below to your actual Linux username */
+    "/home/user/Downloads",
+    "/home/user/.local/share/WhatsApp/",
     NULL   /* sentinel — keep last */
 };
 
