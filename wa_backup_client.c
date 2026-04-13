@@ -41,14 +41,9 @@
 /* Folders to watch — add/remove as needed */
 static const char *WATCH_PATHS[] = {
     /* Android shared via MTP/ADB — update USERNAME if needed */
-    "/sdcard/WhatsApp/Media/WhatsApp Images",
-    "/sdcard/WhatsApp/Media/WhatsApp Video",
-    "/sdcard/WhatsApp/Media/WhatsApp Audio",
-    "/sdcard/WhatsApp/Media/WhatsApp Documents",
     /* WhatsApp Desktop / WhatsApp Web downloads on Linux */
     /* Change 'user' below to your actual Linux username */
-    "/home/user/Downloads",
-    "/home/user/.local/share/WhatsApp/",
+    "/home/user/Downloads"
     NULL   /* sentinel — keep last */
 };
 
