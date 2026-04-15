@@ -5,7 +5,7 @@
  * Compile (Linux):
  *   gcc -o wa_backup_client wa_backup_client.c -lpthread
  *
- * Run (on 192.168.100.6):
+ * Run (on 192.168.100.8):
  *   ./wa_backup_client                 # watch mode (default)
  *   ./wa_backup_client --full-scan     # upload all existing files, then watch
  *   ./wa_backup_client --status        # print server summary and exit
@@ -31,15 +31,15 @@
 #include <pthread.h>
 
 /* ── CONFIG ─────────────────────────────────────────────────────────────── */
-#define SERVER_HOST      "192.168.100.5"        /* Server IP                */
-#define CLIENT_HOST      "192.168.100.6"        /* This machine's IP        */
+#define SERVER_HOST      "192.168.100.9"        /* Server IP                */
+#define CLIENT_HOST      "192.168.100.8"        /* This machine's IP        */
 #define SERVER_PORT      5050
 #define API_KEY          "mysecretkey"           /* Must match server key    */
-#define DEVICE_ID        "client_192.168.100.6" /* Label shown on server    */
+#define DEVICE_ID        "client_192.168.100.8" /* Label shown on server    */
 
 /* Folders to watch — edit as needed */
 static const char *WATCH_PATHS[] = {
-    "/home/user/Downloads",                     /* <-- change to your path  */
+    "/home/lohithkalyan/Downloads",                     /* <-- change to your path  */
     NULL   /* sentinel — keep last */
 };
 
