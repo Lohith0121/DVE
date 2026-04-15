@@ -5,7 +5,7 @@
  * Compile:
  *   gcc -o wa_backup_server wa_backup_server.c -lpthread
  *
- * Run (on 192.168.100.5):
+ * Run (on 192.168.100.9):
  *   ./wa_backup_server 5050 ./wa_backups mysecretkey
  *
  * Endpoints (HTTP/1.0):
@@ -36,7 +36,7 @@
 #include <signal.h>
 
 /* ── Config ─────────────────────────────────────────────────────────────── */
-#define SERVER_IP         "192.168.100.5"           /* This machine's IP     */
+#define SERVER_IP         "192.168.100.9"           /* This machine's IP     */
 #define DEFAULT_PORT      5050
 #define DEFAULT_DIR       "./wa_backups"
 #define DEFAULT_KEY       "mysecretkey"
