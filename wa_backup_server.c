@@ -242,7 +242,7 @@ static void handle_upload(int fd, const char *headers,
     /* ── Auth ── */
     char *key=header_value(headers,"X-API-Key:");
     if(!key){ send_response(fd,401,"application/json","{\"error\":\"No API key\"}"); return; }
-    char key_copy[256]={0}; strncpy(key_copy,key,255); trim_crlf(key_copy);
+    char key_copy[256]={0}; { size_t _i=0; const char *_p=key; while(_p&&*_p&&*_p!='\r'&&*_p!='\n'&&_i<255) key_copy[_i++]=(char)*_p++; key_copy[_i]='\0'; }
     if(strcmp(key_copy,g_api_key)){
         send_response(fd,401,"application/json","{\"error\":\"Bad API key\"}"); return; }
 
@@ -376,7 +376,7 @@ static void handle_upload(int fd, const char *headers,
 static void handle_status(int fd, const char *headers){
     char *key=header_value(headers,"X-API-Key:");
     if(!key){ send_response(fd,401,"application/json","{\"error\":\"No API key\"}"); return; }
-    char key_copy[256]={0}; strncpy(key_copy,key,255); trim_crlf(key_copy);
+    char key_copy[256]={0}; { size_t _i=0; const char *_p=key; while(_p&&*_p&&*_p!='\r'&&*_p!='\n'&&_i<255) key_copy[_i++]=(char)*_p++; key_copy[_i]='\0'; }
     if(strcmp(key_copy,g_api_key)){
         send_response(fd,401,"application/json","{\"error\":\"Bad API key\"}"); return; }
 
@@ -405,7 +405,7 @@ static void handle_status(int fd, const char *headers){
 static void handle_list(int fd, const char *headers){
     char *key=header_value(headers,"X-API-Key:");
     if(!key){ send_response(fd,401,"application/json","{\"error\":\"No API key\"}"); return; }
-    char key_copy[256]={0}; strncpy(key_copy,key,255); trim_crlf(key_copy);
+    char key_copy[256]={0}; { size_t _i=0; const char *_p=key; while(_p&&*_p&&*_p!='\r'&&*_p!='\n'&&_i<255) key_copy[_i++]=(char)*_p++; key_copy[_i]='\0'; }
     if(strcmp(key_copy,g_api_key)){
         send_response(fd,401,"application/json","{\"error\":\"Bad API key\"}"); return; }
 
